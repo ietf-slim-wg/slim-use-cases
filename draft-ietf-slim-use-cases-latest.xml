@@ -1,0 +1,44 @@
+<rfc docName="draft-ietf-slim-use-cases-latest">
+	<front>
+    	<title abbrev="slim use cases">SLIM Use Cases</title>
+
+    	<author initials="M." surname="Thomson" fullname="Martin Thomson">
+			<organization></organization>
+			<address>
+			<postal>
+			<street></street>
+			<city></city>
+			<region></region>
+			<code></code>
+			<country>US</country>
+			</postal>
+			<email>a@b.com</email>
+			</address>
+		</author>
+
+	    <date year="2015"/>
+	    <area>ART</area>
+	    <workgroup>SLIM</workgroup>
+	    <keyword>Note</keyword>
+	    <keyword>SLIM</keyword>
+	    <keyword>language</keyword>
+
+	    <abstract>
+	      <t>
+	        Use cases for selection of language for internet media.
+	      </t>
+	    </abstract>
+
+	</front>
+
+	<middle>
+		<section anchor="intro" title="Introduction">
+			<t>
+				Introduction.
+			</t>
+		</section>
+	</middle>
+	
+	<back>
+	</back>
+</rfc>
