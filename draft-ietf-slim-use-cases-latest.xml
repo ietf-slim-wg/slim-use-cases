@@ -2,7 +2,7 @@
 	<front>
     	<title abbrev="slim use cases">SLIM Use Cases</title>
 
-    	<author initials="M." surname="Thomson" fullname="Martin Thomson">
+    	<author initials="N." surname="Rooney" fullname="Natasha Rooney">
 			<organization></organization>
 			<address>
 			<postal>
@@ -34,11 +34,158 @@
 	<middle>
 		<section anchor="intro" title="Introduction">
 			<t>
-				Introduction.
+				The SLIM working group is developing standards for language selection for non-real time and real time communications. There are a number of relevant use cases which could benefit from this functionality including emergency service rela-time communications and customer services. This document details the use cases for SLIM and gives some indication of necessray requirements.
 			</t>
 		</section>
+
+		<section anchor="use_cases" title="Use Cases">
+			<t>
+				Use cases are listed below:
+			</t>
+
+			<section anchor="single-two-way-language" title="Single two-way language">
+				<t>
+					The simplest use case. One language and modality both ways in media described in sdp as audio or video or text. Straightforward. Works for spoken, written and signed languages.
+				</t>
+				<t>
+					Result: Possible
+				</t>
+			</section>
+
+			<section anchor="alternatives-same-modality" title="Alternatives in the same modality">
+				<t>
+					Two or more language alternatives in the same modality. Two or more languages both ways in media described in sdp as audio or video or text, but only in one modality.Straightforward. Works for spoken, written and signed languages. The answering part selects. There is a relative preference expressed by the order, and the answering part can try to fulfill that in the best way.
+				</t>
+				<t>
+					Result: Possible
+				</t>
+			</section>
+
+			<section anchor="equal-alternatives-different-modalities" title="Fairly equal alternatives in different modalities.">
+				<t>
+					Two or more modality alternatives.
+					Two or more languages in different modalities both ways in media described in sdp as audio or video or text
+					Example a hearing person also competent in sign language declares both spoken and sign language competence in audio and video.
+				</t>
+				<t>
+					This is fairly straightforward, as long as there is no strong difference in preference for these alternatives.
+					The indication of sign language competence is needed to avoid invoking relay services in calls with deaf sign language users only indicating sign language.
+				</t>
+				<t>
+					Result: Possible
+				</t>
+			</section>
+
+			<section anchor="last-resort" title="Last resort indication">
+				<t>
+					A hearing user has text capability but want to use that as last resort.
+					With current hunintlang specification, there is no way to describe preference level between modalities and no way to describe absolute preference.
+				</t>
+				<t>
+					Result: An answering service will have no guidance to which is the preferred modality and may select to use the modality that is the callers last resort even if the preferred alternative is available.
+				</t>
+				<t>
+					A practical case can be a sign language user with a small mobile terminal that has some inconvenient means for texting, but sign language will be strongly preferred. In order to not miss any calls, the indication of text as last resort would be desirable.
+					Possible solution: coding of an absolute preference: hi, med, lo together with the tag.
+				</t>
+				<t>
+					Result: Need for absolute preference indication.
+				</t>
+			</section>
+
+			<section anchor="directional-different-modalities" title="Directional capabilities in different modalities">
+				<t>
+					A hard-of-hearing user strongly prefers to talk and get text back. Getting spoken language input is appreciated.
+					This can be indicated by spoken language two-ways in audio, and reception of language in text.
+				</t>
+				<t>
+					But there is nothing in current coding that says that the text path is important. The answering part may see it as an alternative, just as Section 2.3.
+				</t>
+				<t>					
+					There is a way to indicate that the call shall fail if a language is not met, but that may be too drastic for this user. It may be important to be able to connect and just say something, or use residual hearing to get something back when the voice is familiar.
+					Possible solution: coding of an absolute preference: hi, med, lo together with the tag could solve this case if used together with the directional indications.
+					Another solution would be to indicate required grouping of media. But that seems more complex.
+				</t>
+				<t>
+					Result: Need for absolute preference indication.
+				</t>
+			</section>
+
+			<section anchor="combination-of-modalities" title="Combination of modalities">
+				<t>
+					Similar to Section 2.5. A deaf-blind person may have highest preference for signing out and getting text back. Indication of sign language output in video and text reception in text, using the current directional attributes. An answering part may seek suitable modalities for each direction and find the only possible combination.
+				</t>
+				<t>	
+					Result: Possible
+				</t>
+			</section>
+
+			<section anchor="prefer-speech-to-speech" title="Person with speech disabilities who prefer speech-to-speech service">
+				<t>
+					A person who speaks in a way that is hard to understand, may be used to have support of a speech-to-speech relay service that adds clear speech when needed for the understanding. Calls with close friends and family might be possible without the relay service.
+				</t>
+				<t>	
+					Text can be used as a fall-back.
+				</t>
+				<t>	
+					This user would indicate preference for receiving spoken language in audio.
+					Text output can be indicated but this user might want to use that as last resort.
+					But there is no current coding for vague or unarticulated speech or other needs for a speech-to-speech service.
+				</t>
+				<t>	
+					A possibility could be to indicate no preference for spoken language out, a coding of proposed assisting service and an indication of text output on a low absolute level.
+				</t>
+				<t>	
+					Result: Need of service indication, and absolute level of preference indication
+				</t>
+			</section>
+
+			<section anchor="prefer-type" title="Person with speech disabilities who prefer to type and hear">
+				<t>
+					A person who speaks in a way that is hard to understand, may be used to use text for output and listen to spoken language for input. This user would indicate preference for receiving spoken language in audio. Text output modality can be indicated.
+				</t>
+				<t>	
+					If the answering part has text and audio capabilities, there is a match. If only voice, there is a need to invoke a text relay service.
+				</t>
+				<t>	
+					Result: Possible.
+				</t>
+			</section>
+
+			<section anchor="all-possibilities" title="All Possibilities">
+				<t>
+					A tele-sales center calls out and want to offer all kinds of possibilities so that the answering part can select. A tele-sales center has competence in multiple spoken languages and can invoke relay services rapidly if needed. So, it indicates in the call setup competence in a number of spoken languages in audio, a number of sign languages in video and a number of written languages in text.
+				</t>
+				<t>	
+					A deaf-blind person who prefers to sign out and get text back answers with only these capabilities. The center can detect that and act accordingly.
+				</t>
+				<t>	
+					Alternative1: The center calls without sdp. The deafblind user includes its sdp offer and the center sees what is needed to fulfill the call. Alternative 2: The center calls out with only the spoken language capabilities indicated that the caller can handle.
+				</t>
+				<t>	
+					The deaf-blind answering person, or terminal or service provider detects the difference compared to the capabilities of the answering party, and adds a suitable relay service. ( this does not use all the offerings of the callers competence to pull in extra services, but is maybe a more realistic case for what usually happens. )
+				</t>
+				<t>	
+					Result: doable in the same way as cases 1-8.
+				</t>
+			</section>
+		</section>
+
+		<section anchor="final-comments" title="Final Comments">
+			<t>
+				To fulfill all the use cases the currently specified directionality will be needed, as well as an indication of absolute preference is needed. An indication of suitable service and its spoken language is needed for the speech-to-speech case, but can be useful for other cases as well. 
+			</t>
+			<t>	
+				There is no clear need for explicit grouping of modalities seem to be needed. 
+			</t>
+		</section>
+
 	</middle>
 	
 	<back>
-	</back>
+
+        <section anchor="change-log" title="Change Log">
+        	<t>[[The RFC Editor is requested to remove this section at publication.]]</t>
+        </section>
+  </back>
 </rfc>
