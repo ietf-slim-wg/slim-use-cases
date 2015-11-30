@@ -160,7 +160,10 @@
 					A deaf-blind person who prefers to sign out and get text back answers with only these capabilities. The center can detect that and act accordingly.
 				</t>
 				<t>	
-					Alternative1: The center calls without sdp. The deafblind user includes its sdp offer and the center sees what is needed to fulfill the call. Alternative 2: The center calls out with only the spoken language capabilities indicated that the caller can handle.
+					Alternative1: The center calls without sdp. The deafblind user includes its sdp offer and the center sees what is needed to fulfill the call. 
+				</t>
+				<t>	
+					Alternative 2: The center calls out with only the spoken language capabilities indicated that the caller can handle.
 				</t>
 				<t>	
 					The deaf-blind answering person, or terminal or service provider detects the difference compared to the capabilities of the answering party, and adds a suitable relay service. ( this does not use all the offerings of the callers competence to pull in extra services, but is maybe a more realistic case for what usually happens. )
