@@ -20,17 +20,17 @@ author:
   -
     ins: N. Rooney
     name: Natasha Rooney
-    organisation: GSMA
+    organization: GSMA
     email: nrooney@gsma.com
     uri: https://gsma.com
 
 informative:
-  NOTE_WELL: https://www.ietf.org/about/note-well.html
-  SDP: https://tools.ietf.org/html/rfc4566
-  SLIM: https://datatracker.ietf.org/wg/slim/charter/
+  rfc4566:
+
 
 --- abstract
 	Use cases for selection of language for internet media.
+
 	      
 --- middle: 
 # Introduction
@@ -43,7 +43,7 @@ Use cases are listed below:
 			
 ## Single two-way language
 					
-The simplest use case. One language and modality both ways in media described in SDP [SDP] as audio or video or text. Straightforward. Works for spoken, written and signed languages. An example is when a user makes a voice call and the preferred language of that user is specified in SDP, allowing the answerer to make decisions based on that specification.
+The simplest use case. One language and modality both ways in media described in SDP [RFC4566] as audio or video or text. Straightforward. Works for spoken, written and signed languages. An example is when a user makes a voice call and the preferred language of that user is specified in SDP, allowing the answerer to make decisions based on that specification.
 				
 - Solution: Possible
 				
@@ -127,7 +127,7 @@ The use cases identified here try to cover all cases of when users wish to make 
 
 To fulfill all the use cases the currently specified directionality will be needed, as well as an indication of absolute preference. An indication of suitable service and its spoken language is needed for the speech-to-speech case, but can be useful for other cases as well. There is no clear need for explicit grouping of modalities seem to be needed. 
 
-Subsequent work in the Selection of Language for Internet Media Working Group [SLIM] will work on Internet Drafts to support these use cases. 
+Subsequent work in the Selection of Language for Internet Media Working Group (SLIM: https://datatracker.ietf.org/wg/slim/charter/) will work on Internet Drafts to support these use cases. 
 
 # Security Considerations
 
@@ -136,6 +136,7 @@ Indications of user preferred language may give indications as to their national
 # IANA Considerations
 
 This document has no IANA actions. 
+
 
 --- back
 
