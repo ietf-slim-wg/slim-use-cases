@@ -1,3 +1,4 @@
+---
 title: SLIM Use Cases
 abbrev: slim-use-cases
 docname: draft-ietf-slim-use-cases-latest
@@ -16,24 +17,17 @@ stand_alone: no
 pi: 
 
 author:
-	- 
-		ins: N. Rooney
-		name: Natasha Rooney
-		organization: GSMA
-		email: nrooney@gsma.com
-    	uri: https://gsma.com
-		address: 
-		postal: 
-		street: The Walbrook Building, 25 Walbrook
-		city: London
-		region: 
-		code: EC4N 8AF
-		country: UK
-	    
+  -
+    ins: N. Rooney
+    name: Natasha Rooney
+    organisation: GSMA
+    email: nrooney@gsma.com
+    uri: https://gsma.com
+
 informative:
-	SDP: https://tools.ietf.org/html/rfc4566
-	SLIM: https://datatracker.ietf.org/wg/slim/charter/
-	NOTE_WELL: https://www.ietf.org/about/note-well.html
+  NOTE_WELL: https://www.ietf.org/about/note-well.html
+  SDP: https://tools.ietf.org/html/rfc4566
+  SLIM: https://datatracker.ietf.org/wg/slim/charter/
 
 --- abstract
 	Use cases for selection of language for internet media.
@@ -143,7 +137,7 @@ Indications of user preferred language may give indications as to their national
 
 This document has no IANA actions. 
 
--- back
+--- back
 
 # Acknowledgments
 

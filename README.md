@@ -1,6 +1,6 @@
-# 
+# SLIM Use Cases
 
-This is the working area for the Working Group internet-draft, "".
+This is the working area for the Working Group internet-draft, "SLIM Use Cases".
 
 * [Editor's copy](https://ietf-slim-wg.github.io/slim-use-cases/)
 * [Working Group Draft] (https://tools.ietf.org/html/draft-ietf-slim-use-cases-latest)
