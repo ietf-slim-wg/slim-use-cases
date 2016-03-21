@@ -29,7 +29,8 @@ informative:
 
 
 --- abstract
-	Use cases for selection of language for internet media.
+
+Use cases for selection of language for internet media.
 
 	      
 --- middle: 
