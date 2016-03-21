@@ -7,449 +7,265 @@
 
   <title>SLIM Use Cases</title>
 
-  <style type="text/css" title="Xml2Rfc (sans serif)">
-  /*<![CDATA[*/
-	  a {
-	  text-decoration: none;
-	  }
-      /* info code from SantaKlauss at http://www.madaboutstyle.com/tooltip2.html */
-      a.info {
-          /* This is the key. */
-          position: relative;
-          z-index: 24;
-          text-decoration: none;
-      }
-      a.info:hover {
-          z-index: 25;
-          color: #FFF; background-color: #900;
-      }
-      a.info span { display: none; }
-      a.info:hover span.info {
-          /* The span will display just on :hover state. */
-          display: block;
-          position: absolute;
-          font-size: smaller;
-          top: 2em; left: -5em; width: 15em;
-          padding: 2px; border: 1px solid #333;
-          color: #900; background-color: #EEE;
-          text-align: left;
-      }
-	  a.smpl {
-	  color: black;
-	  }
-	  a:hover {
-	  text-decoration: underline;
-	  }
-	  a:active {
-	  text-decoration: underline;
-	  }
-	  address {
-	  margin-top: 1em;
-	  margin-left: 2em;
-	  font-style: normal;
-	  }
-	  body {
-	  color: black;
-	  font-family: verdana, helvetica, arial, sans-serif;
-	  font-size: 10pt;
-	  max-width: 55em;
-	  
-	  }
-	  cite {
-	  font-style: normal;
-	  }
-	  dd {
-	  margin-right: 2em;
-	  }
-	  dl {
-	  margin-left: 2em;
-	  }
-	
-	  ul.empty {
-	  list-style-type: none;
-	  }
-	  ul.empty li {
-	  margin-top: .5em;
-	  }
-	  dl p {
-	  margin-left: 0em;
-	  }
-	  dt {
-	  margin-top: .5em;
-	  }
-	  h1 {
-	  font-size: 14pt;
-	  line-height: 21pt;
-	  page-break-after: avoid;
-	  }
-	  h1.np {
-	  page-break-before: always;
-	  }
-	  h1 a {
-	  color: #333333;
-	  }
-	  h2 {
-	  font-size: 12pt;
-	  line-height: 15pt;
-	  page-break-after: avoid;
-	  }
-	  h3, h4, h5, h6 {
-	  font-size: 10pt;
-	  page-break-after: avoid;
-	  }
-	  h2 a, h3 a, h4 a, h5 a, h6 a {
-	  color: black;
-	  }
-	  img {
-	  margin-left: 3em;
-	  }
-	  li {
-	  margin-left: 2em;
-	  margin-right: 2em;
-	  }
-	  ol {
-	  margin-left: 2em;
-	  margin-right: 2em;
-	  }
-	  ol p {
-	  margin-left: 0em;
-	  }
-	  p {
-	  margin-left: 2em;
-	  margin-right: 2em;
-	  }
-	  pre {
-	  margin-left: 3em;
-	  background-color: lightyellow;
-	  padding: .25em;
-	  }
-	  pre.text2 {
-	  border-style: dotted;
-	  border-width: 1px;
-	  background-color: #f0f0f0;
-	  width: 69em;
-	  }
-	  pre.inline {
-	  background-color: white;
-	  padding: 0em;
-	  }
-	  pre.text {
-	  border-style: dotted;
-	  border-width: 1px;
-	  background-color: #f8f8f8;
-	  width: 69em;
-	  }
-	  pre.drawing {
-	  border-style: solid;
-	  border-width: 1px;
-	  background-color: #f8f8f8;
-	  padding: 2em;
-	  }
-	  table {
-	  margin-left: 2em;
-	  }
-	  table.tt {
-	  vertical-align: top;
-	  }
-	  table.full {
-	  border-style: outset;
-	  border-width: 1px;
-	  }
-	  table.headers {
-	  border-style: outset;
-	  border-width: 1px;
-	  }
-	  table.tt td {
-	  vertical-align: top;
-	  }
-	  table.full td {
-	  border-style: inset;
-	  border-width: 1px;
-	  }
-	  table.tt th {
-	  vertical-align: top;
-	  }
-	  table.full th {
-	  border-style: inset;
-	  border-width: 1px;
-	  }
-	  table.headers th {
-	  border-style: none none inset none;
-	  border-width: 1px;
-	  }
-	  table.left {
-	  margin-right: auto;
-	  }
-	  table.right {
-	  margin-left: auto;
-	  }
-	  table.center {
-	  margin-left: auto;
-	  margin-right: auto;
-	  }
-	  caption {
-	  caption-side: bottom;
-	  font-weight: bold;
-	  font-size: 9pt;
-	  margin-top: .5em;
-	  }
-	
-	  table.header {
-	  border-spacing: 1px;
-	  width: 95%;
-	  font-size: 10pt;
-	  color: white;
-	  }
-	  td.top {
-	  vertical-align: top;
-	  }
-	  td.topnowrap {
-	  vertical-align: top;
-	  white-space: nowrap; 
-	  }
-	  table.header td {
-	  background-color: gray;
-	  width: 50%;
-	  }
-	  table.header a {
-	  color: white;
-	  }
-	  td.reference {
-	  vertical-align: top;
-	  white-space: nowrap;
-	  padding-right: 1em;
-	  }
-	  thead {
-	  display:table-header-group;
-	  }
-	  ul.toc, ul.toc ul {
-	  list-style: none;
-	  margin-left: 1.5em;
-	  margin-right: 0em;
-	  padding-left: 0em;
-	  }
-	  ul.toc li {
-	  line-height: 150%;
-	  font-weight: bold;
-	  font-size: 10pt;
-	  margin-left: 0em;
-	  margin-right: 0em;
-	  }
-	  ul.toc li li {
-	  line-height: normal;
-	  font-weight: normal;
-	  font-size: 9pt;
-	  margin-left: 0em;
-	  margin-right: 0em;
-	  }
-	  li.excluded {
-	  font-size: 0pt;
-	  }
-	  ul p {
-	  margin-left: 0em;
-	  }
-	
-	  .comment {
-	  background-color: yellow;
-	  }
-	  .center {
-	  text-align: center;
-	  }
-	  .error {
-	  color: red;
-	  font-style: italic;
-	  font-weight: bold;
-	  }
-	  .figure {
-	  font-weight: bold;
-	  text-align: center;
-	  font-size: 9pt;
-	  }
-	  .filename {
-	  color: #333333;
-	  font-weight: bold;
-	  font-size: 12pt;
-	  line-height: 21pt;
-	  text-align: center;
-	  }
-	  .fn {
-	  font-weight: bold;
-	  }
-	  .hidden {
-	  display: none;
-	  }
-	  .left {
-	  text-align: left;
-	  }
-	  .right {
-	  text-align: right;
-	  }
-	  .title {
-	  color: #990000;
-	  font-size: 18pt;
-	  line-height: 18pt;
-	  font-weight: bold;
-	  text-align: center;
-	  margin-top: 36pt;
-	  }
-	  .vcardline {
-	  display: block;
-	  }
-	  .warning {
-	  font-size: 14pt;
-	  background-color: yellow;
-	  }
-	
-	
-	  @media print {
-	  .noprint {
-		display: none;
-	  }
-	
-	  a {
-		color: black;
-		text-decoration: none;
-	  }
-	
-	  table.header {
-		width: 90%;
-	  }
-	
-	  td.header {
-		width: 50%;
-		color: black;
-		background-color: white;
-		vertical-align: top;
-		font-size: 12pt;
-	  }
-	
-	  ul.toc a::after {
-		content: leader('.') target-counter(attr(href), page);
-	  }
-	
-	  ul.ind li li a {
-		content: target-counter(attr(href), page);
-	  }
-	
-	  .print2col {
-		column-count: 2;
-		-moz-column-count: 2;
-		column-fill: auto;
-	  }
-	  }
-	
-	  @page {
-	  @top-left {
-		   content: "Internet-Draft"; 
-	  } 
-	  @top-right {
-		   content: "December 2010"; 
-	  } 
-	  @top-center {
-		   content: "Abbreviated Title";
-	  } 
-	  @bottom-left {
-		   content: "Doe"; 
-	  } 
-	  @bottom-center {
-		   content: "Expires June 2011"; 
-	  } 
-	  @bottom-right {
-		   content: "[Page " counter(page) "]"; 
-	  } 
-	  }
-	
-	  @page:first { 
-		@top-left {
-		  content: normal;
-		}
-		@top-right {
-		  content: normal;
-		}
-		@top-center {
-		  content: normal;
-		}
-	  }
-  /*]]>*/
-  </style>
-<style type="text/css">
+<style type="text/css">/*<![CDATA[*/
 @viewport {
   zoom: 1.0;
   width: extend-to-zoom;
 }
-
 @-ms-viewport {
   width: extend-to-zoom;
   zoom: 1.0;
 }
 
+@media screen and (min-width: 1024px) {
+  ul.toc, #rfc\.toc {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    right: calc(50vw - 500px);
+    width: 300px;
+    padding: 0 1em;
+    z-index: 1;
+  }
+  #rfc\.toc {
+    top: 16px;
+  }
+  ul.toc {
+    top: 80px;
+    overflow: auto;
+  }
+
+  body {
+    padding-left: 1.5em;
+    padding-right: 29em;
+  }
+}
+
 body {
-  font: 11pt cambria, helvetica, arial, sans-serif;
+  font: 15px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333;
   font-size-adjust: 0.5;
   line-height: 130%;
-  margin: 1em auto;
-  max-width: 700px;
+  margin: 2.5em auto;
+  max-width: 724px;
 }
 
 .title, .filename, h1, h2, h3, h4 {
-  font-family: candara, helvetica, arial, sans-serif;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size-adjust: 0.5;
+  font-weight: 500;
+  color: #333;
+  line-height: 100%;
+  margin: 0.8em 0 0.3em;
 }
-.title { font-size: 150%; }
-h1 { font-size: 130%; }
-h2 { font-size: 120%; }
-h3, h4 { font-size: 110%; }
+.title { font-size: 36px; }
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3, h4 { font-size: 18px; }
+h1 a[href], h2 a[href], h3 a[href], h4 a[href] {
+  color: #333;
+}
+
+ul.toc li {
+  list-style: none;
+  text-indent: -2.5em;
+  padding-left: 2.5em;
+  padding-bottom: 5px;
+  margin: 0;
+}
+ul.toc, ul.toc ul {
+  margin: 0 0 0 1.5em;
+}
 
 table {
   margin-left: 0em;
+  border-collapse: collapse;
 }
+th {
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+td {
+  border-top: 1px solid #ddd;
+  vertical-align: top;
+}
+tr:nth-child(2n+1) > td,
+tr:nth-child(2n+1) > th {
+  background-color: #f9f9f9;
+}
+td.reference {
+  max-width: 200px;
+  border-top: none;
+  padding-right: 1em;
+}
+.right {
+  text-align: right;
+}
+
+
 table.header {
   width: 100%;
 }
-
 table.header td {
-  background-color: inherit;
+  border: none;
+  background-color: transparent;
   color: black;
+}
+.filename {
+  color: rgb(119, 119, 119);
+  font-size: 23px;
+  font-weight: normal;
+  height: auto;
+  line-height: 100%;
+}
+#rfc\.abstract+p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 130%;
 }
 
 samp, tt, code, pre {
   font: 11pt consolas, monospace;
   font-size-adjust: none;
 }
-
-pre.text, pre.text2 {
-  width: 90%;
+pre {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  overflow-x: auto;
+  padding: 5px;
+  margin: 5px;
+}
+.figure {
+  font-style: italic;
+  margin: 0 1.5em;
 }
 
-dt {
-  float: left; clear: left;
-  margin: 0.5em 0.5em 0 0;
+address {
+  margin: 10px 0 0;
 }
-dt:first-child {
-  margin-top: 0;
+.vcard {
+  font-style: normal;
 }
-dd {
-  margin: 0.5em 0 0 2em;
+.vcardline {
+  display: block;
 }
-dd p, dd ul {
-  margin-top: 0; margin-bottom: 0;
+.vcardline .fn {
+  font-weight: bold;
 }
-dd *+p {
+.vcardline .hidden {
+  display: none;
+}
+
+dl {
+  margin-left: 1em;
+}
+dl.dl-horizontal: {
+  margin-left: 0;
+}
+dl > dt {
+  float: left;
+  margin-right: 1em;
+}
+dl.nohang > dt {
+  float: none;
+}
+dl > dd {
+  margin-bottom: .5em;
+}
+dl.compact > dd {
+  margin-bottom: 0em;
+}
+dl > dd > dl {
   margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+ul.empty {
+  list-style-type: none;
+}
+ul.empty li {
+  margin-top: .5em;
 }
 
-ol, ul {
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+a {
+  text-decoration: none;
+}
+a[href] {
+  color: #2a6496;
+}
+a[href]:hover {
+  background-color: #eee;
+}
+
+ol, ul, li, p {
   padding: 0;
   margin: 0.5em 0 0.5em 2em;
 }
-ul.toc, ul.toc ul {
-  margin: 0 0 0 1.5em;
+li, p {
+  margin-left: 0;
 }
-ul.toc a:first-child {
-  display: inline-block;
-  min-width: 1.2em;
+
+.github-fork-ribbon-wrapper {
+  display: none;
 }
-</style>
+@media screen and (min-width: 800px) {
+  /* "Fork me on GitHub" CSS ribbon based on
+   * https://github.com/simonwhitaker/github-fork-ribbon-css
+   */
+  .github-fork-ribbon {
+    position: absolute;
+    padding: 2px 0;
+    background-color: #a00;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+    font: 700 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    pointer-events: auto;
+
+    top: 38px;
+    right: -45px;
+
+    transform: rotate(45deg);
+  }
+
+  .github-fork-ribbon a[href],
+  .github-fork-ribbon a[href]:hover {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+    width: 190px;
+    line-height: 18px;
+
+    display: inline-block;
+    padding: 2px 0;
+
+    border: 1.5px dotted #fff;
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .github-fork-ribbon-wrapper {
+    display: block;
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    overflow: hidden;
+    top: 0; right: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .github-fork-ribbon-wrapper {
+    position: fixed;
+  }
+/*]]>*/</style>
 
   <link href="#rfc.toc" rel="Contents"/>
 <link href="#rfc.section.1" rel="Chapter" title="1 Introduction"/>
@@ -459,12 +275,16 @@ ul.toc a:first-child {
 <link href="#rfc.section.2.3" rel="Chapter" title="2.3 Fairly equal alternatives in different modalities."/>
 <link href="#rfc.section.2.4" rel="Chapter" title="2.4 Last resort indication"/>
 <link href="#rfc.section.2.5" rel="Chapter" title="2.5 Directional capabilities in different modalities"/>
+<link href="#rfc.section.2.5.1" rel="Chapter" title="2.5.1 Fail gracefully?"/>
 <link href="#rfc.section.2.6" rel="Chapter" title="2.6 Combination of modalities"/>
 <link href="#rfc.section.2.7" rel="Chapter" title="2.7 Person with speech disabilities who prefer speech-to-speech service"/>
 <link href="#rfc.section.2.8" rel="Chapter" title="2.8 Person with speech disabilities who prefer to type and hear"/>
 <link href="#rfc.section.2.9" rel="Chapter" title="2.9 All Possibilities"/>
 <link href="#rfc.section.3" rel="Chapter" title="3 Final Comments"/>
-<link href="#rfc.appendix.A" rel="Chapter" title="A Change Log"/>
+<link href="#rfc.section.4" rel="Chapter" title="4 Security Considerations"/>
+<link href="#rfc.section.5" rel="Chapter" title="5 IANA Considerations"/>
+<link href="#rfc.references" rel="Chapter" title="6 Informative References"/>
+<link href="#rfc.appendix.A" rel="Chapter" title="A Acknowledgments"/>
 <link href="#rfc.authors" rel="Chapter"/>
 
 
@@ -473,9 +293,9 @@ ul.toc a:first-child {
 
   <meta name="dct.creator" content="Rooney, N." />
   <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-slim-use-cases-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2015-11-26" />
-  <meta name="dct.abstract" content="Use cases for selection of language for internet media.  " />
-  <meta name="description" content="Use cases for selection of language for internet media.  " />
+  <meta name="dct.issued" scheme="ISO8601" content="2016-3-21" />
+  <meta name="dct.abstract" content="Use cases for selection of language for internet media." />
+  <meta name="description" content="Use cases for selection of language for internet media." />
 
 </head>
 
@@ -490,11 +310,11 @@ ul.toc a:first-child {
 </tr>
 <tr>
   <td class="left">Internet-Draft</td>
-  <td class="right">November 26, 2015</td>
+  <td class="right">GSMA</td>
 </tr>
 <tr>
-  <td class="left">Expires: May 29, 2016</td>
-  <td class="right"></td>
+  <td class="left">Expires: September 22, 2016</td>
+  <td class="right">March 21, 2016</td>
 </tr>
 
     	
@@ -507,67 +327,94 @@ ul.toc a:first-child {
   <h1 id="rfc.abstract">
   <a href="#rfc.abstract">Abstract</a>
 </h1>
-<p>Use cases for selection of language for internet media.  </p>
+<p>Use cases for selection of language for internet media.</p>
 <h1 id="rfc.status">
   <a href="#rfc.status">Status of This Memo</a>
 </h1>
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at http://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on May 29, 2016.</p>
+<p>This Internet-Draft will expire on September 22, 2016.</p>
 <h1 id="rfc.copyrightnotice">
   <a href="#rfc.copyrightnotice">Copyright Notice</a>
 </h1>
-<p>Copyright (c) 2015 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
+<p>Copyright (c) 2016 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (http://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
-<h1 id="rfc.section.1"><a href="#rfc.section.1">1.</a> <a href="#intro" id="intro">Introduction</a></h1>
-<p id="rfc.section.1.p.1">The SLIM working group is developing standards for language selection for non-real time and real time communications. There are a number of relevant use cases which could benefit from this functionality including emergency service rela-time communications and customer services. This document details the use cases for SLIM and gives some indication of necessray requirements.  </p>
-<h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#use_cases" id="use_cases">Use Cases</a></h1>
-<p id="rfc.section.2.p.1">Use cases are listed below: </p>
+<h1 id="rfc.section.1"><a href="#rfc.section.1">1.</a> <a href="#introduction" id="introduction">Introduction</a></h1>
+<p id="rfc.section.1.p.1">The SLIM working group is developing standards for language selection for non-real-time and real-time communications. There are a number of relevant use cases which could benefit from this functionality including emergency service real-time communications and customer service. This document details the use cases for SLIM and gives some indication of necessary requirements. For each use case a &#8216;Solution&#8217; is provided, indicating the implementability of the use case based on draft-ietf-slim-negotiating-human-language-00.</p>
+<h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#use-cases" id="use-cases">Use Cases</a></h1>
+<p id="rfc.section.2.p.1">Use cases are listed below:</p>
 <h1 id="rfc.section.2.1"><a href="#rfc.section.2.1">2.1.</a> <a href="#single-two-way-language" id="single-two-way-language">Single two-way language</a></h1>
-<p id="rfc.section.2.1.p.1">The simplest use case. One language and modality both ways in media described in sdp as audio or video or text. Straightforward. Works for spoken, written and signed languages.  </p>
-<p id="rfc.section.2.1.p.2">Result: Possible </p>
-<h1 id="rfc.section.2.2"><a href="#rfc.section.2.2">2.2.</a> <a href="#alternatives-same-modality" id="alternatives-same-modality">Alternatives in the same modality</a></h1>
-<p id="rfc.section.2.2.p.1">Two or more language alternatives in the same modality. Two or more languages both ways in media described in sdp as audio or video or text, but only in one modality.Straightforward. Works for spoken, written and signed languages. The answering part selects. There is a relative preference expressed by the order, and the answering part can try to fulfill that in the best way.  </p>
-<p id="rfc.section.2.2.p.2">Result: Possible </p>
-<h1 id="rfc.section.2.3"><a href="#rfc.section.2.3">2.3.</a> <a href="#equal-alternatives-different-modalities" id="equal-alternatives-different-modalities">Fairly equal alternatives in different modalities.</a></h1>
-<p id="rfc.section.2.3.p.1">Two or more modality alternatives.  Two or more languages in different modalities both ways in media described in sdp as audio or video or text Example a hearing person also competent in sign language declares both spoken and sign language competence in audio and video.  </p>
-<p id="rfc.section.2.3.p.2">This is fairly straightforward, as long as there is no strong difference in preference for these alternatives.  The indication of sign language competence is needed to avoid invoking relay services in calls with deaf sign language users only indicating sign language.  </p>
-<p id="rfc.section.2.3.p.3">Result: Possible </p>
-<h1 id="rfc.section.2.4"><a href="#rfc.section.2.4">2.4.</a> <a href="#last-resort" id="last-resort">Last resort indication</a></h1>
-<p id="rfc.section.2.4.p.1">A hearing user has text capability but want to use that as last resort.  With current hunintlang specification, there is no way to describe preference level between modalities and no way to describe absolute preference.  </p>
-<p id="rfc.section.2.4.p.2">Result: An answering service will have no guidance to which is the preferred modality and may select to use the modality that is the callers last resort even if the preferred alternative is available.  </p>
-<p id="rfc.section.2.4.p.3">A practical case can be a sign language user with a small mobile terminal that has some inconvenient means for texting, but sign language will be strongly preferred. In order to not miss any calls, the indication of text as last resort would be desirable.  Possible solution: coding of an absolute preference: hi, med, lo together with the tag.  </p>
-<p id="rfc.section.2.4.p.4">Result: Need for absolute preference indication.  </p>
-<h1 id="rfc.section.2.5"><a href="#rfc.section.2.5">2.5.</a> <a href="#directional-different-modalities" id="directional-different-modalities">Directional capabilities in different modalities</a></h1>
-<p id="rfc.section.2.5.p.1">A hard-of-hearing user strongly prefers to talk and get text back. Getting spoken language input is appreciated.  This can be indicated by spoken language two-ways in audio, and reception of language in text.  </p>
-<p id="rfc.section.2.5.p.2">But there is nothing in current coding that says that the text path is important. The answering part may see it as an alternative, just as Section 2.3.  </p>
-<p id="rfc.section.2.5.p.3">There is a way to indicate that the call shall fail if a language is not met, but that may be too drastic for this user. It may be important to be able to connect and just say something, or use residual hearing to get something back when the voice is familiar.  Possible solution: coding of an absolute preference: hi, med, lo together with the tag could solve this case if used together with the directional indications.  Another solution would be to indicate required grouping of media. But that seems more complex.  </p>
-<p id="rfc.section.2.5.p.4">Result: Need for absolute preference indication.  </p>
+<p id="rfc.section.2.1.p.1">The simplest use case. One language and modality both ways in media described in SDP <a href="#RFC4566">[RFC4566]</a> as audio or video or text. Straightforward. Works for spoken, written and signed languages. An example is when a user makes a voice call and the preferred language of that user is specified in SDP, allowing the answerer to make decisions based on that specification.</p>
+<p/>
+
+<ul>
+  <li>Solution: Possible</li>
+</ul>
+<h1 id="rfc.section.2.2"><a href="#rfc.section.2.2">2.2.</a> <a href="#alternatives-in-the-same-modality" id="alternatives-in-the-same-modality">Alternatives in the same modality</a></h1>
+<p id="rfc.section.2.2.p.1">Two or more language alternatives in the same modality. Two or more languages both ways in media described in SDP as audio or video or text, but only in one modality. Straightforward. Works for spoken, written and signed languages. The answering part selects. There is a relative preference expressed by the order, and the answering part can try to fulfill that in the best way. An example is a user who makes a voice call and prefers French first and German as their second language, and the answerer selects to speak German as no French speaking abilites are available.</p>
+<p id="rfc.section.2.2.p.2">Solution: Possible</p>
+<h1 id="rfc.section.2.3"><a href="#rfc.section.2.3">2.3.</a> <a href="#fairly-equal-alternatives-in-different-modalities" id="fairly-equal-alternatives-in-different-modalities">Fairly equal alternatives in different modalities.</a></h1>
+<p id="rfc.section.2.3.p.1">Two or more modality alternatives. Two or more languages in different modalities both ways in media described in SDP as audio or video or text. An example is a hearing person also competent in sign language declares both spoken and sign language competence in audio and video. This is fairly straightforward, as long as there is no strong difference in preference for these alternatives. The indication of sign language competence is needed to avoid invoking relay services in calls with deaf sign language users only indicating sign language.</p>
+<p id="rfc.section.2.3.p.2">Solution: Possible</p>
+<h1 id="rfc.section.2.4"><a href="#rfc.section.2.4">2.4.</a> <a href="#last-resort-indication" id="last-resort-indication">Last resort indication</a></h1>
+<p id="rfc.section.2.4.p.1">One language in the different modalities. Allows the user to indicate one last resort language when no other is available. For example, a hearing user has text capability but want to use that as last resort. (With current hunintlang specification, there is no way to describe preference level between modalities and no way to describe absolute preference.)</p>
+<p id="rfc.section.2.4.p.2">Solution: An answering service will have no guidance to which is the preferred modality and may select to use the modality that is the callers last resort even if the preferred alternative is available.</p>
+<p id="rfc.section.2.4.p.3">Another practical case can be a sign language user with a small mobile terminal that has some inconvenient means for texting, but sign language will be strongly preferred. In order to not miss any calls, the indication of text as last resort would be desirable.  Possible solution: coding of an absolute preference: hi, med, lo together with the tag.</p>
+<p id="rfc.section.2.4.p.4">Solution: Need for absolute preference indication.</p>
+<h1 id="rfc.section.2.5"><a href="#rfc.section.2.5">2.5.</a> <a href="#directional-capabilities-in-different-modalities" id="directional-capabilities-in-different-modalities">Directional capabilities in different modalities</a></h1>
+<p id="rfc.section.2.5.p.1">Two or more language alternatives in the different modalities. For example, a hard-of-hearing user strongly prefers to talk and get text back. Getting spoken language input is appreciated. This can be indicated by spoken language two-ways in audio, and reception of language in text. (There is no current solution that says that the text path is important. The answering part may see it as an alternative.)</p>
+<p id="rfc.section.2.5.p.2">Solution: Need for preference indication per modality</p>
+<h1 id="rfc.section.2.5.1"><a href="#rfc.section.2.5.1">2.5.1.</a> <a href="#fail-gracefully" id="fail-gracefully">Fail gracefully?</a></h1>
+<p id="rfc.section.2.5.1.p.1">There currently are methods to indicate that the call shall fail if a language is not met, but that may be too drastic for some users including the one in the above scenario (2.5). It may be important to be able to connect and just say something, or use residual hearing to get something back when the voice is familiar.</p>
+<p id="rfc.section.2.5.1.p.2">Possible solution: coding of an absolute preference together with the tag could solve this case if used together with the directional indications. For example:</p>
+<p>
+  <samp>preference: hi, med, lo</samp>
+</p>
+<p id="rfc.section.2.5.1.p.4">Another solution would be to indicate required grouping of media, however this raises the complexity level.</p>
 <h1 id="rfc.section.2.6"><a href="#rfc.section.2.6">2.6.</a> <a href="#combination-of-modalities" id="combination-of-modalities">Combination of modalities</a></h1>
-<p id="rfc.section.2.6.p.1">Similar to Section 2.5. A deaf-blind person may have highest preference for signing out and getting text back. Indication of sign language output in video and text reception in text, using the current directional attributes. An answering part may seek suitable modalities for each direction and find the only possible combination.  </p>
-<p id="rfc.section.2.6.p.2">Result: Possible </p>
-<h1 id="rfc.section.2.7"><a href="#rfc.section.2.7">2.7.</a> <a href="#prefer-speech-to-speech" id="prefer-speech-to-speech">Person with speech disabilities who prefer speech-to-speech service</a></h1>
-<p id="rfc.section.2.7.p.1">A person who speaks in a way that is hard to understand, may be used to have support of a speech-to-speech relay service that adds clear speech when needed for the understanding. Calls with close friends and family might be possible without the relay service.  </p>
-<p id="rfc.section.2.7.p.2">Text can be used as a fall-back.  </p>
-<p id="rfc.section.2.7.p.3">This user would indicate preference for receiving spoken language in audio.  Text output can be indicated but this user might want to use that as last resort.  But there is no current coding for vague or unarticulated speech or other needs for a speech-to-speech service.  </p>
-<p id="rfc.section.2.7.p.4">A possibility could be to indicate no preference for spoken language out, a coding of proposed assisting service and an indication of text output on a low absolute level.  </p>
-<p id="rfc.section.2.7.p.5">Result: Need of service indication, and absolute level of preference indication </p>
-<h1 id="rfc.section.2.8"><a href="#rfc.section.2.8">2.8.</a> <a href="#prefer-type" id="prefer-type">Person with speech disabilities who prefer to type and hear</a></h1>
-<p id="rfc.section.2.8.p.1">A person who speaks in a way that is hard to understand, may be used to use text for output and listen to spoken language for input. This user would indicate preference for receiving spoken language in audio. Text output modality can be indicated.  </p>
-<p id="rfc.section.2.8.p.2">If the answering part has text and audio capabilities, there is a match. If only voice, there is a need to invoke a text relay service.  </p>
-<p id="rfc.section.2.8.p.3">Result: Possible.  </p>
+<p id="rfc.section.2.6.p.1">Similar to Section 2.5, two or more language alternatives in the different modalities. A deaf-blind person may have highest preference for signing to the answerer and then receiving text in return. This requires the indication of sign language output in video and text reception in text, using the current directional attributes. An answering part may seek suitable modalities for each direction and find the only possible combination.</p>
+<p id="rfc.section.2.6.p.2">Solution: Need for preference indication per modality</p>
+<h1 id="rfc.section.2.7"><a href="#rfc.section.2.7">2.7.</a> <a href="#person-with-speech-disabilities-who-prefer-speech-to-speech-service" id="person-with-speech-disabilities-who-prefer-speech-to-speech-service">Person with speech disabilities who prefer speech-to-speech service</a></h1>
+<p id="rfc.section.2.7.p.1">One specific language for one specific modality with a speech-speech engine. A person who speaks in a way that is hard to understand, may be used to have support of a speech-to-speech relay service that adds clear speech when needed for the understanding. Typically, only calls with close friends and family might be possible without the relay service.</p>
+<p id="rfc.section.2.7.p.2">This user would indicate preference for receiving spoken language in audio. Text output can be indicated but this user might want to use that as last resort. (There is no current coding for vague or unarticulated speech or other needs for a speech-to-speech service.)</p>
+<p id="rfc.section.2.7.p.3">A possibility could be to indicate no preference for spoken language out, a coding of proposed assisting service and an indication of text output on a low absolute level.</p>
+<p id="rfc.section.2.7.p.4">Solution: Need of service indication, and absolute level of preference indication.</p>
+<h1 id="rfc.section.2.8"><a href="#rfc.section.2.8">2.8.</a> <a href="#person-with-speech-disabilities-who-prefer-to-type-and-hear" id="person-with-speech-disabilities-who-prefer-to-type-and-hear">Person with speech disabilities who prefer to type and hear</a></h1>
+<p id="rfc.section.2.8.p.1">Two or more language alternatives for multiple modalities. A person who speaks in a way that may be hard to understand, may be used to using text for output and listen to spoken language for input. This user would indicate preference for receiving spoken language in audio. Text output modality can be indicated.</p>
+<p id="rfc.section.2.8.p.2">If the answering part has text and audio capabilities, there is a match. If only voice, there is a need to invoke a text relay service.</p>
+<p id="rfc.section.2.8.p.3">Solution: Need of service indication, and absolute level of preference indication.</p>
 <h1 id="rfc.section.2.9"><a href="#rfc.section.2.9">2.9.</a> <a href="#all-possibilities" id="all-possibilities">All Possibilities</a></h1>
-<p id="rfc.section.2.9.p.1">A tele-sales center calls out and want to offer all kinds of possibilities so that the answering part can select. A tele-sales center has competence in multiple spoken languages and can invoke relay services rapidly if needed. So, it indicates in the call setup competence in a number of spoken languages in audio, a number of sign languages in video and a number of written languages in text.  </p>
-<p id="rfc.section.2.9.p.2">A deaf-blind person who prefers to sign out and get text back answers with only these capabilities. The center can detect that and act accordingly.  </p>
-<p id="rfc.section.2.9.p.3">Alternative1: The center calls without sdp. The deafblind user includes its sdp offer and the center sees what is needed to fulfill the call. Alternative 2: The center calls out with only the spoken language capabilities indicated that the caller can handle.  </p>
-<p id="rfc.section.2.9.p.4">The deaf-blind answering person, or terminal or service provider detects the difference compared to the capabilities of the answering party, and adds a suitable relay service. ( this does not use all the offerings of the callers competence to pull in extra services, but is maybe a more realistic case for what usually happens. ) </p>
-<p id="rfc.section.2.9.p.5">Result: doable in the same way as cases 1-8.  </p>
+<p id="rfc.section.2.9.p.1">Mutiple languages and multiple modalities. For example: a tele-sales center calls out and wants to offer all kinds of possibilities so that the answering party can select. A tele-sales center has competence in multiple spoken languages and can invoke relay services rapidly if needed. So, it indicates in the call setup competence in a number of spoken languages in audio, a number of sign languages in video and a number of written languages in text. This would allow, as a further example, a deaf-blind person who prefers to sign out and get text back answers with only these capabilities. The center can detect that and act accordingly, this could work in the following methods:</p>
+<p/>
+
+<ul>
+  <li>Solution Alternative 1: The center calls without SDP. A deafblind user includes its SDP offer and the center sees what is needed to fulfill the call.</li>
+  <li>Solution Alternative 2: The center calls out with only the spoken language capabilities indicated that the caller can handle.</li>
+</ul>
+<p id="rfc.section.2.9.p.3">The deaf-blind answering person, or terminal or service provider detects the difference compared to the capabilities of the answering party, and adds a suitable relay service. (This does not use all the offerings of the callers competence to pull in extra services, but is maybe a more realistic case for what usually happens in practice. )</p>
+<p id="rfc.section.2.9.p.4">Solution: Possible in the same way as cases 1.8.</p>
 <h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#final-comments" id="final-comments">Final Comments</a></h1>
-<p id="rfc.section.3.p.1">To fulfill all the use cases the currently specified directionality will be needed, as well as an indication of absolute preference is needed. An indication of suitable service and its spoken language is needed for the speech-to-speech case, but can be useful for other cases as well.  </p>
-<p id="rfc.section.3.p.2">There is no clear need for explicit grouping of modalities seem to be needed.  </p>
-<h1 id="rfc.appendix.A"><a href="#rfc.appendix.A">Appendix A.</a> <a href="#change-log" id="change-log">Change Log</a></h1>
-<p id="rfc.section.A.p.1">[[The RFC Editor is requested to remove this section at publication.]]</p>
+<p id="rfc.section.3.p.1">The use cases identified here try to cover all cases of when users wish to make text, voice or video communication using the language of set of languages in which they are able to speak, write or sign and for which the receivers are also able to communicate. Some of these use cases go even further to allow give some users the ability to select multiple and different languages based on their abilities and needs.</p>
+<p id="rfc.section.3.p.2">To fulfill all the use cases the currently specified directionality will be needed, as well as an indication of absolute preference. An indication of suitable service and its spoken language is needed for the speech-to-speech case, but can be useful for other cases as well. There is no clear need for explicit grouping of modalities seem to be needed.</p>
+<p id="rfc.section.3.p.3">Subsequent work in the Selection of Language for Internet Media Working Group (SLIM: https://datatracker.ietf.org/wg/slim/charter/) will work on Internet Drafts to support these use cases.</p>
+<h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a></h1>
+<p id="rfc.section.4.p.1">Indications of user preferred language may give indications as to their nationality, background and abilities. It may also give indication to any possible disabilities and some existing and ongoing health issues.</p>
+<h1 id="rfc.section.5"><a href="#rfc.section.5">5.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a></h1>
+<p id="rfc.section.5.p.1">This document has no IANA actions.</p>
+<h1 id="rfc.references"><a href="#rfc.references">6.</a> Informative References</h1>
+<table>
+  <tbody>
+    <tr>
+      <td class="reference">
+        <b id="RFC4566">[RFC4566]</b>
+      </td>
+      <td class="top"><a>Handley, M.</a>, <a>Jacobson, V.</a> and <a>C. Perkins</a>, "<a href="http://tools.ietf.org/html/rfc4566">SDP: Session Description Protocol</a>", RFC 4566, DOI 10.17487/RFC4566, July 2006.</td>
+    </tr>
+  </tbody>
+</table>
+<h1 id="rfc.appendix.A"><a href="#rfc.appendix.A">Appendix A.</a> <a href="#acknowledgments" id="acknowledgments">Acknowledgments</a></h1>
+<p id="rfc.section.A.p.1">Gunnar Hellstrom&#8217;s experience and knowledge in this area provided a great deal of these use cases. Thanks also goes to Randall Gellens and Brian Rosen.</p>
 <h1 id="rfc.authors">
   <a href="#rfc.authors">Author's Address</a>
 </h1>
@@ -579,7 +426,7 @@ ul.toc a:first-child {
 		<span class="family-name">Rooney</span>
 	  </span>
 	</span>
-	<span class="org vcardline"></span>
+	<span class="org vcardline">GSMA</span>
 	<span class="adr">
 	  
 	  <span class="vcardline">
@@ -587,9 +434,11 @@ ul.toc a:first-child {
 		<span class="region"></span>
 		<span class="code"></span>
 	  </span>
-	  <span class="country-name vcardline">US</span>
+	  <span class="country-name vcardline"></span>
 	</span>
-	<span class="vcardline">EMail: <a href="mailto:a@b.com">a@b.com</a></span>
+	<span class="vcardline">EMail: <a href="mailto:nrooney@gsma.com">nrooney@gsma.com</a></span>
+
+<span class="vcardline">URI: <a href="https://gsma.com">https://gsma.com</a></span>
 
   </address>
 </div>
@@ -605,12 +454,16 @@ ul.toc a:first-child {
 <li>2.3.   <a href="#rfc.section.2.3">Fairly equal alternatives in different modalities.</a></li>
 <li>2.4.   <a href="#rfc.section.2.4">Last resort indication</a></li>
 <li>2.5.   <a href="#rfc.section.2.5">Directional capabilities in different modalities</a></li>
-<li>2.6.   <a href="#rfc.section.2.6">Combination of modalities</a></li>
+<ul><li>2.5.1.   <a href="#rfc.section.2.5.1">Fail gracefully?</a></li>
+</ul><li>2.6.   <a href="#rfc.section.2.6">Combination of modalities</a></li>
 <li>2.7.   <a href="#rfc.section.2.7">Person with speech disabilities who prefer speech-to-speech service</a></li>
 <li>2.8.   <a href="#rfc.section.2.8">Person with speech disabilities who prefer to type and hear</a></li>
 <li>2.9.   <a href="#rfc.section.2.9">All Possibilities</a></li>
 </ul><li>3.   <a href="#rfc.section.3">Final Comments</a></li>
-<li>Appendix A.   <a href="#rfc.appendix.A">Change Log</a></li>
+<li>4.   <a href="#rfc.section.4">Security Considerations</a></li>
+<li>5.   <a href="#rfc.section.5">IANA Considerations</a></li>
+<li>6.   <a href="#rfc.references">Informative References</a></li>
+<li>Appendix A.   <a href="#rfc.appendix.A">Acknowledgments</a></li>
 <li><a href="#rfc.authors">Author's Address</a></li>
 
 
