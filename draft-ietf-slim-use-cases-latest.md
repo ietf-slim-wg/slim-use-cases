@@ -25,7 +25,7 @@ author:
     uri: https://gsma.com
 
 informative:
-  rfc4566:
+  RFC4566: https://datatracker.ietf.org/doc/rfc4566/
 
 
 --- abstract
@@ -33,7 +33,7 @@ informative:
 Use cases for selection of language for internet media.
 
 	      
---- middle: 
+--- middle
 # Introduction
 
 The SLIM working group is developing standards for language selection for non-real-time and real-time communications. There are a number of relevant use cases which could benefit from this functionality including emergency service real-time communications and customer service. This document details the use cases for SLIM and gives some indication of necessary requirements. For each use case a 'Solution' is provided, indicating the implementability of the use case based on draft-ietf-slim-negotiating-human-language-00.
