@@ -28,13 +28,13 @@ informative:
   RFC4566: https://datatracker.ietf.org/doc/rfc4566/
 
   SLIM:
-  	target: https://datatracker.ietf.org/wg/slim/charter/
-  	title: SLIM Working Group
+    target: https://datatracker.ietf.org/wg/slim/charter/
+    title: SLIM Working Group
 
   NEGOTIATING-HUMAN-LANG:
-  	target: https://datatracker.ietf.org/doc/draft-ietf-slim-negotiating-human-language/
-  	title: Negotiating Human Language in Real-Time Communications
-  	author:
+    target: https://datatracker.ietf.org/doc/draft-ietf-slim-negotiating-human-language/
+    title: Negotiating Human Language in Real-Time Communications
+    author:
       name: Randall Gellens
       ins: R. Gellens
     date: 2016
